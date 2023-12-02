@@ -5,11 +5,6 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  document.getElementById("parrafo").innerHTML = excuseGenerator();
-};
-
 function excuseGenerator() {
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
@@ -27,13 +22,19 @@ function excuseGenerator() {
   let whatIndex = Math.floor(Math.random() * what.length);
   let whenIndex = Math.floor(Math.random() * when.length);
 
-  return who(
+  return (
     who[whoIndex] +
-      " " +
-      action[actionIndex] +
-      " " +
-      what[whatIndex] +
-      " " +
-      when[whenIndex]
+    " " +
+    action[actionIndex] +
+    " " +
+    what[whatIndex] +
+    " " +
+    when[whenIndex]
   );
 }
+
+window.onload = function() {
+  //write your code here
+  let resultado = excuseGenerator();
+  document.querySelector("#parrafo").innerHTML = resultado;
+};
