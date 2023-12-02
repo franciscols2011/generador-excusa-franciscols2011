@@ -12,11 +12,8 @@ window.onload = function() {
 
 function excuseGenerator() {
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
-
   let action = ["ate", "peed", "crushed", "broke"];
-
   let what = ["my homework", "the keys", "the car"];
-
   let when = [
     "before the class",
     "right on time",
@@ -26,20 +23,17 @@ function excuseGenerator() {
   ];
 
   let whoIndex = Math.floor(Math.random() * who.length);
-
   let actionIndex = Math.floor(Math.random() * action.length);
-
   let whatIndex = Math.floor(Math.random() * what.length);
-
   let whenIndex = Math.floor(Math.random() * when.length);
 
-  return (
+  return who(
     who[whoIndex] +
-    " " +
-    action[actionIndex] +
-    " " +
-    what[whatIndex] +
-    " " +
-    when[whenIndex]
+      " " +
+      action[actionIndex] +
+      " " +
+      what[whatIndex] +
+      " " +
+      when[whenIndex]
   );
 }
